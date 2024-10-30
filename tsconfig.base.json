@@ -14,8 +14,8 @@
     "incremental": true,
     "isolatedModules": true,
     "lib": ["es2022"],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
@@ -28,7 +28,13 @@
     "skipLibCheck": true,
     "sourceMap": false,
     "strict": true,
-    "target": "es2022",
-    "verbatimModuleSyntax": false
-  }
+    "target": "ESNext",
+    "verbatimModuleSyntax": false,
+    "baseUrl": ".",
+    "paths": {
+      "@portfolio-frontend/*": ["apps/portfolio-frontend/src/*"]
+    }
+  },
+  "include": ["apps/**/*.ts", "libs/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
